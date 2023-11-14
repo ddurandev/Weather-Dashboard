@@ -12,21 +12,18 @@ var searchCity = $("#searchInput");
 var searchBtn = $("#searchBtn");
 var apiKey = "bcc2e59478feccd363efd648f25a1f88";
 
-searchBtn.on("click", function(){
+
+searchBtn.on("click", function () {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity.val()}&appid=${apiKey}&units=imperial`)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        $("#temp").text(data.main.temp)
-    })
-
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${searchCity.val()}&appid=${apiKey}&units=imperial`)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        $("#temp1").text(data.list[5].main.temp)
-        console.log(data.list[5].main)
-    })
+        .then(res => res.json())
+        .then(data => {
+            $("#currentCity").text(data.name)
+            var currentDate = new Date(data.dt * 1000)
+            var formatSet = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = currentDate.toLocaleDateString('en-US', formatSet);
+            $("#currentCity-date").text(formattedDate);
+            $("#temp").html(`${data.main.temp}&deg;F`);
+            $("#wind").html(`${data.wind.speed} mph`);
+            $("#humidity").html(`${data.main.humidity}%`);
+        })
 });
-
-
