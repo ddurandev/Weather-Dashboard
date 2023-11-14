@@ -25,5 +25,8 @@ searchBtn.on("click", function(){
     .then(data => {
         console.log(data)
         $("#temp1").text(data.list[5].main.temp)
+        console.log(data.list[5].main)
     })
 });
+
+
