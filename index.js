@@ -27,10 +27,3 @@ searchBtn.on("click", function () {
             $("#humidity").html(`${data.main.humidity}%`);
         })
 });
-
-
-
-
-
-
-
