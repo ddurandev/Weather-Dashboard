@@ -12,71 +12,67 @@
 <body>
     <h1 class="text-center">Weather Dashboard</h1>
     <div class="container text-center">
-        <div class="row row-cols-2">
-            <div>
-                <div class="col">
-                    <input type="text" id="searchInput">
-                    <button id="searchBtn">Search</button>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <input type="text" id="searchInput" class="form-control mb-2">
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
                 </div>
-                <ul id="cityList">
-                </ul>
-
+                <div class="col-md-12">
+                    <h2>Search History</h2>
+                    <ul id="searchHistory" class="list-group"></ul>
+                </div>
             </div>
-            <div class="col p-3 mb-2 bg-info-subtle text-emphasis-info>
-                <div class=" card text-center mt-3">
-                <div class="card-body">
-                    <h2 class="card-title">Current Weather</h2>
-                    <div class="d-flex justify-content-center align-items-center">
-                        <div>
-                            <h3 class="card-subtitle mb-2 mt-3">City: <span id="currentCity"></span></h3>
-                            <h5>Date: <span id="currentCity-date"></span></h5>
-                            <p>Temperature: <span id="temp">--</span></p>
-                            <p>Wind: <span id="wind">--</span></p>
-                            <p>Humidity: <span id="humidity">--</span></p>
-                        </div>
+
+            <div class="col-md-8">
+                <div class="row g-col-3 g-start-2 card text-bg-primary mb-3">
+                    <div class="col">
+                        <h2><span>City: </span><span id="currentCity"></span></h2>
+                        <h5>Date: <span id="currentCity-date"></span></h5>
+                        <p>Temperature: <span id="temp">--</span></p>
+                        <p>Wind: <span id="wind">--</span></p>
+                        <p>Humidity: <span id="humidity">--</span></p>
+                    </div>
+                </div>
+
+                <div class="row row-cols-5">
+                    <div class="card">
+                        <h5>Date: <span id="date1"></span></h5>
+                        <p>Temperature: <span id="temp1">--</span></p>
+                        <p>Wind: <span id="wind1">--</span></p>
+                        <p>Humidity: <span id="humidity1">--</span></p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Date: <span id="date1"></span></h5>
+                        <p>Temperature: <span id="temp1">--</span></p>
+                        <p>Wind: <span id="wind1">--</span></p>
+                        <p>Humidity: <span id="humidity1">--</span></p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Date: <span id="date1"></span></h5>
+                        <p>Temperature: <span id="temp1">--</span></p>
+                        <p>Wind: <span id="wind1">--</span></p>
+                        <p>Humidity: <span id="humidity1">--</span></p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Date: <span id="date1"></span></h5>
+                        <p>Temperature: <span id="temp1">--</span></p>
+                        <p>Wind: <span id="wind1">--</span></p>
+                        <p>Humidity: <span id="humidity1">--</span></p>
+                    </div>
+
+                    <div class="card">
+                        <h5>Date: <span id="date1"></span></h5>
+                        <p>Temperature: <span id="temp1">--</span></p>
+                        <p>Wind: <span id="wind1">--</span></p>
+                        <p>Humidity: <span id="humidity1">--</span></p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="container text-center row">
-
-            <div class="me-5 col p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
-                <h5>Date: <span id="date1"></span></h5>
-                <p>Temperature: <span id="temp1">--</span></p>
-                <p>Wind: <span id="wind1">--</span></p>
-                <p>Humidity: <span id="humidity1">--</span></p>
-            </div>
-
-            <div class="me-5 col p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
-                <h5>Date: <span id="date2"></span></h5>
-                <p>Temperature: <span id="temp2">--</span></p>
-                <p>Wind: <span id="wind2">--</span></p>
-                <p>Humidity: <span id="humidity2">--</span></p>
-            </div>
-
-            <div class="me-5 col p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
-                <h5>Date: <span id="date3"></span></h5>
-                <p>Temperature: <span id="temp3">--</span></p>
-                <p>Wind: <span id="wind3">--</span></p>
-                <p>Humidity: <span id="humidity3">--</span></p>
-            </div>
-
-            <div class="me-5 col p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
-                <h5>Date: <span id="date4"></span></h5>
-                <p>Temperature: <span id="temp4">--</span></p>
-                <p>Wind: <span id="wind4">--</span></p>
-                <p>Humidity: <span id="humidity4">--</span></p>
-            </div>
-
-            <div class="col p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">
-                <h5>Date: <span id="date5"></span></h5>
-                <p>Temperature: <span id="temp5">--</span></p>
-                <p>Wind: <span id="wind5">--</span></p>
-                <p>Humidity: <span id="humidity5">--</span></p>
-            </div>
-        </div>
-    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="./index.js"></script>

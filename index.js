@@ -25,29 +25,6 @@ searchBtn.on("click", function () {
             $("#temp").html(`${data.main.temp}&deg;F`);
             $("#wind").html(`${data.wind.speed} mph`);
             $("#humidity").html(`${data.main.humidity}%`);
-            $("#date1").text(formattedDate);
-            $("#temp1").html(`${data.main.temp}&deg;F`);
-            $("#wind1").html(`${data.wind.speed} mph`);
-            $("#humidity1").html(`${data.main.humidity}%`);
-            $("#date2").text(formattedDate);
-            $("#temp2").html(`${data.main.temp}&deg;F`);
-            $("#wind2").html(`${data.wind.speed} mph`);
-            $("#humidity2").html(`${data.main.humidity}%`);
-            $("#date3").text(formattedDate);
-            $("#temp3").html(`${data.main.temp}&deg;F`);
-            $("#wind3").html(`${data.wind.speed} mph`);
-            $("#humidity3").html(`${data.main.humidity}%`);
-            $("#date4").text(formattedDate);
-            $("#temp4").html(`${data.main.temp}&deg;F`);
-            $("#wind4").html(`${data.wind.speed} mph`);
-            $("#humidity4").html(`${data.main.humidity}%`);
-            $("#date5").text(formattedDate);
-            $("#temp5").html(`${data.main.temp}&deg;F`);
-            $("#wind5").html(`${data.wind.speed} mph`);
-            $("#humidity5").html(`${data.main.humidity}%`);
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
         })
 });
 
